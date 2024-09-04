@@ -1,0 +1,162 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+  background-color: #001f3f;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+
+ul, li {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 20px;
+  text-align: left;
+  cursor: pointer;
+  position: relative; /* Position for pseudo-elements */
+}
+
+ul li {
+  font-size: larger;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+}
+
+/* Underline effect */
+ul li::before, ul li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+ul li::before {
+  top: 0.5;
+  transform: scaleX(0);
+}
+
+ul li::after {
+  bottom: 0;
+  transform: scaleX(0);
+}
+
+/* Hover effect */
+ul li:hover::before {
+  transform: scaleX(1);
+}
+
+ul li:hover::after {
+  transform: scaleX(1);
+}
+
+span {
+  padding-left: 15px;
+  margin-left: 5px;
+  font-weight: bolder;
+  font-size: xx-large;
+  text-transform: capitalize;
+  color: white;
+}
+
+.footer {
+  width: 100vw;
+  height: 8vh;
+  background-color: #001f3f;
+  text-align: center;
+  margin-top: auto;
+  text-transform: capitalize;
+}
+
+h2 {
+  line-height: 8vh;
+}
+
+.content {
+  height: 82vh;
+  width: 100vw;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.list_item {
+  position: absolute;
+  right: 7vw;
+}
+
+@media (max-width: 653px) {
+  .navbar {
+    display: block;
+  }
+
+  .top {
+    height: 10vh;
+    background-color: #001f3f;
+  }
+
+  .list_item {
+    z-index: 1;
+    height: 90vh;
+    width: 140px;
+    background-color: #001f3f;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  ul, li {
+    margin-top: 16px;
+    display: block;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .bi {
+    display: block;
+    cursor: pointer;
+  }
+
+  .list_item {
+    position: relative;
+    left: -300px;
+  }
+
+  .main2 {
+    position: relative;
+    left: 0px;
+  }
+
+  .list_item {
+    transition: all 0.5s;
+  }
+}
+
+.active {
+  color: #cb7676;
+}
