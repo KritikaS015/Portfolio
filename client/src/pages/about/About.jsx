@@ -48,9 +48,15 @@ function About() {
                 enthusiasm for staying updated with the latest technologies and
                 contributing to the tech community.
               </p>
-              <button className="bg-gradient-to-r from-green-400  to-blue-400 text-black font-bold  transform transition-transform duration-300 hover:scale-105 px-4 py-2  rounded-full mt-4 md:mr-12 ">
-                More About Me
-              </button>
+              <a
+                href="https://github.com/KritikaS015" // Replace with your actual link
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-gradient-to-r from-green-400 to-blue-400 text-black font-bold transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full mt-4 md:mr-12">
+                  More About Me
+                </button>
+              </a>
             </div>
           </div>
         </div>

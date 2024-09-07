@@ -3,12 +3,9 @@ import { Link } from "react-scroll";
 
 export default function Navbar(props) {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
-  };
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
   };
 
   // Declare md as a variable
@@ -41,7 +38,7 @@ export default function Navbar(props) {
             >
               {props.home}
               <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              <span className="absolute -top-[0.5] left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 "></span>
+              <span className="absolute -top-[0.5] left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
           </li>
           <li className="relative group">
@@ -88,52 +85,6 @@ export default function Navbar(props) {
               <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               <span className="absolute -top-[0.5] left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
-          </li>
-          <li className="relative group">
-            <button
-              onClick={toggleDropdown}
-              className="text-white text-lg font-semibold capitalize relative mr-8"
-            >
-              More
-              <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              <span className="absolute -top-[0.5] left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </button>
-            <ul
-              className={`absolute top-full left-0 bg-black p-4 rounded-md ${
-                isDropdownOpen ? "block" : "hidden"
-              }`}
-            >
-              <li className="relative group">
-                <Link
-                  to="projects"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={10}
-                  onClick={toggleDropdown}
-                  className="text-white text-lg font-semibold capitalize relative"
-                >
-                  Projects
-                  <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                  <span className="absolute -top-[0.5] left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </Link>
-              </li>
-              <li className="relative group">
-                <Link
-                  to="blog"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={10}
-                  onClick={toggleDropdown}
-                  className="text-white text-lg font-semibold capitalize relative"
-                >
-                  Blog
-                  <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                  <span className="absolute -top-[0.5] left-0 w-full h-1 bg-gradient-to-r from-green-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </Link>
-              </li>
-            </ul>
           </li>
         </ul>
       </div>
