@@ -58,12 +58,12 @@ function Skills() {
 
   return (
     <div
-      className="bg-cover bg-center text-center text-white py-10 bg-black"
+      className="bg-cover bg-center text-center text-white py-10  bg-black"
       id="skills"
       ref={skillRef}
     >
-      <div className="relative mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-2xl sm:text-2xl md:text-4xl -mt-6 md:mt-0 font-bold text-center mb-10 text-transparent bg-clip-text text-white">
+      <div className="relative mx-auto px-8 md:px-16 lg:px-24 ">
+        <h2 className="text-2xl sm:text-2xl md:text-4xl -mt-6 md:mt-0 lg:mt-0 font-bold text-center mb-10 text-transparent bg-clip-text text-white">
           Skillset
         </h2>
 
@@ -76,7 +76,7 @@ function Skills() {
 
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center pt-6 md:pt-0">
           <div className="lg:w-6/12 lg:mr-8">
-            <h3 className="text-2xl font-semibold mb-4 sm:mt-4 lg:mt-16 bg-clip-text text-transparent bg-gradient-to-r from-[#5B99C2] to-white">
+            <h3 className="text-2xl font-semibold mb-4 sm:mt-4 md:mt-4 lg:mt-16 bg-clip-text text-transparent bg-gradient-to-r from-[#5B99C2] to-white">
               Professional Skillset
             </h3>
             {/* Radial Progress Circles for Skills */}
